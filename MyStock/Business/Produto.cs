@@ -10,7 +10,7 @@ namespace Business
     public class Produto : Base
     {
         [OpcoesBase(UsarNoBancoDeDados = true, ChavePrimaria = true, UsarParaBuscar = true)]
-        public string IdProd { get; set; }
+        public string CodigoProd { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
         public string Nome { get; set; }
