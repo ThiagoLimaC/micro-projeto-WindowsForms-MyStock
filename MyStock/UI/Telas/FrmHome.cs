@@ -39,6 +39,7 @@ namespace UI
             txtNome.Text = string.Empty;
             txtValor.Text = string.Empty;
             txtDescricao.Text = string.Empty;
+            txtCodigo.Enabled = true;
         }
 
         private void LoadAll()
@@ -101,6 +102,7 @@ namespace UI
                 MessageBox.Show("Produto cadastrado com sucesso!");
             }
 
+
             LimparCampos();
             LoadAll();
         }
@@ -126,11 +128,13 @@ namespace UI
         private void btnEditar_Click(object sender, EventArgs e)
         {
             btnSalvar.Text = "Editar";
+            txtCodigo.Enabled = false;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             btnSalvar.Text = "Excluir";
+            txtCodigo.Enabled = false;
         }
 
         private void dgProduto_CellClick(object sender, DataGridViewCellEventArgs e)
