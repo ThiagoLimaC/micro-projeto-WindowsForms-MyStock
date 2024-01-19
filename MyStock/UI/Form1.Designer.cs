@@ -34,28 +34,28 @@ namespace UI
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtValor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.dgProduto = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.txtValor = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -134,6 +134,25 @@ namespace UI
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(53)))), ((int)(((byte)(97)))));
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrar.Location = new System.Drawing.Point(3, 106);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnCadastrar.Size = new System.Drawing.Size(261, 67);
+            this.btnCadastrar.TabIndex = 1;
+            this.btnCadastrar.Text = "           Cadastrar";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.pictureBox1);
@@ -185,31 +204,12 @@ namespace UI
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Computer;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 65;
+            this.iconPictureBox1.IconSize = 54;
             this.iconPictureBox1.Location = new System.Drawing.Point(291, 13);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(65, 54);
             this.iconPictureBox1.TabIndex = 2;
             this.iconPictureBox1.TabStop = false;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(53)))), ((int)(((byte)(97)))));
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Image")));
-            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrar.Location = new System.Drawing.Point(3, 106);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnCadastrar.Size = new System.Drawing.Size(261, 67);
-            this.btnCadastrar.TabIndex = 1;
-            this.btnCadastrar.Text = "           Cadastrar";
-            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrar.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -265,13 +265,6 @@ namespace UI
             this.txtNome.Size = new System.Drawing.Size(304, 22);
             this.txtNome.TabIndex = 6;
             // 
-            // txtValor
-            // 
-            this.txtValor.Location = new System.Drawing.Point(291, 289);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(304, 22);
-            this.txtValor.TabIndex = 8;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -323,16 +316,17 @@ namespace UI
             this.txtDescricao.Size = new System.Drawing.Size(304, 140);
             this.txtDescricao.TabIndex = 12;
             // 
-            // button4
+            // btnSalvar
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(291, 523);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(304, 41);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Salvar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(291, 523);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(304, 41);
+            this.btnSalvar.TabIndex = 13;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // dgProduto
             // 
@@ -367,29 +361,38 @@ namespace UI
             // btnPesquisar
             // 
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.btnPesquisar.Font = new System.Drawing.Font("Yu Gothic UI", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Font = new System.Drawing.Font("Yu Gothic UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.Location = new System.Drawing.Point(986, 78);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(88, 33);
             this.btnPesquisar.TabIndex = 17;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // txtValor
+            // 
+            this.txtValor.Location = new System.Drawing.Point(291, 289);
+            this.txtValor.Mask = "$000,00";
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(304, 22);
+            this.txtValor.TabIndex = 18;
             // 
             // FrmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 595);
+            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgProduto);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label6);
@@ -430,17 +433,17 @@ namespace UI
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView dgProduto;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.MaskedTextBox txtValor;
     }
 }
 

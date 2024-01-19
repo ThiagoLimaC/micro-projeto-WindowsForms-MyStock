@@ -156,6 +156,17 @@
         LocWW6BjxzTD2Dc+C841lzb+ogAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnCadastrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAARlJREFUSEvtlD0LwjAQhjMlon/CRX+qiz9FdBGUDtLq7CLoKE7irJsu511M/KCh
+        3qUpOPjAOzTN3UP6cerPzwO5asHSjKHQ++qYLWZI+11pPA+pnqMY2EG5K4+DLbUn1Yu3651rIUcgvcBa
+        tW3NU64PtokU0eMtzBWFPchUx57crkeII9/pDXN+rQnFsFUaG0w/mkZFIE4npTDFaaUUhji9lPJF3IyU
+        UiGGmTK4Qfb18jNxmjJ40kGgIEHwMPhLOk0ZFG/ChXXyRUqgeBQujg1DSkBuurj5FG4iDVPqgZXu45w9
+        hpsxU+hMJPXUksdKPVHyulKPSJ5K6mHJU0s9lfKmpJ6gvGmpx/7nNGRowtF4xdnubv35VZS6A251N49T
+        i2D5AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEYAAABGCAYAAABxLuKEAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -198,17 +209,6 @@
         Z2b+re9fyU4k3/82i7OPk/1UREJL8DGSsXTu10RkVA6v/5AvrmXmt8Yy2cNcYu+JiK0VKFWedodY+L+y
         f+n/166riWTyzJ1RKfdAPJN9nEnuwFXHuJR7G9eg+H8n33bhLwt5nFfCAb7/Tf77Gr/m6YSU/XEslbs3
         mUxalberRz3qUY961KMe9VhdGAxfAsA0fxkvP//WAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnCadastrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAARlJREFUSEvtlD0LwjAQhjMlon/CRX+qiz9FdBGUDtLq7CLoKE7irJsu511M/KCh
-        3qUpOPjAOzTN3UP6cerPzwO5asHSjKHQ++qYLWZI+11pPA+pnqMY2EG5K4+DLbUn1Yu3651rIUcgvcBa
-        tW3NU64PtokU0eMtzBWFPchUx57crkeII9/pDXN+rQnFsFUaG0w/mkZFIE4npTDFaaUUhji9lPJF3IyU
-        UiGGmTK4Qfb18jNxmjJ40kGgIEHwMPhLOk0ZFG/ChXXyRUqgeBQujg1DSkBuurj5FG4iDVPqgZXu45w9
-        hpsxU+hMJPXUksdKPVHyulKPSJ5K6mHJU0s9lfKmpJ6gvGmpx/7nNGRowtF4xdnubv35VZS6A251N49T
-        i2D5AAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

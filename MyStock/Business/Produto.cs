@@ -16,9 +16,10 @@ namespace Business
         public string Nome { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
-        public string Descricao { get; set; }
+        public decimal Valor { get; set; }
 
         [OpcoesBase(UsarNoBancoDeDados = true)]
-        public decimal Valor { get; set; }
+        public string Descricao { get; set; }
+        
     }
 }

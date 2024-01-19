@@ -71,6 +71,9 @@ namespace Database
 
                 string queryString = string.Empty;
 
+
+                // concatenar a variável ação
+
                 /// Inserir 
                 if (acao == 1)
                 {
@@ -121,7 +124,7 @@ namespace Database
             return list;
         }
 
-        public virtual List<IBase> Busca(string idBuscar)
+        public virtual List<IBase> Busca(string codigoBuscar)
         {
             var list = new List<IBase>();
 
@@ -143,7 +146,7 @@ namespace Database
                 //    }
                 //}
 
-                string queryString = "EXEC usp_BuscarId" + this.GetType().Name + " '" + idBuscar + "';";
+                string queryString = "EXEC uspBuscarCodigo" + this.GetType().Name + " '" + codigoBuscar + "';";
 
                 SqlCommand command = new SqlCommand(queryString, connection);
                 command.Connection.Open();
