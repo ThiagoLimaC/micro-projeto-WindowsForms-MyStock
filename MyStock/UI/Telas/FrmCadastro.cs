@@ -9,16 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI
+namespace UI.Telas
 {
-    public partial class FrmProduto : Form
+    public partial class FrmCadastro : Form
     {
-        public FrmProduto()
+        public FrmCadastro()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FrmCadastro_Load(object sender, EventArgs e)
         {
             LoadAll();
         }
