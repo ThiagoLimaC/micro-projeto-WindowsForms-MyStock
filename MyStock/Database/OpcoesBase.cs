@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-    public class OpcoesBase
+    public class OpcoesBase : Attribute
     {
         public bool UsarNoBancoDeDados { get; set; }
         public bool UsarParaBuscar { get; set; }
