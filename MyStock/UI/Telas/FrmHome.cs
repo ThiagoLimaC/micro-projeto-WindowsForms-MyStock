@@ -165,5 +165,10 @@ namespace UI
             txtValor.Text = prod.Valor.ToString();
             txtDescricao.Text = prod.Descricao;
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
