@@ -11,11 +11,13 @@ namespace Database
 {
     public class Base : IBase
     {
-
+        /// <summary>
+        /// Variável que contém o endereço de conexão com o banco de dados
+        /// </summary>
         private string ConnectionString = ConfigurationManager.AppSettings["SqlConnection"];
 
         /// <summary>
-        /// Faz uma espécie de conversão de string pegando os tipos do C# e transformando e tipos SQL
+        /// Converte o tipo da propriedade C# para a nomenclatura SQL
         /// </summary>
         public string TipoPropriedade(PropertyInfo pi)
         {
@@ -124,28 +126,18 @@ namespace Database
             return list;
         }
 
+        /// <summary>
+        /// Executa a ação de uma procedure que verifica a existência de um código
+        /// enviado por parâmetro 
+        /// </summary>
+        /// <param name="codigoBuscar"> Valor da chave primária do produto </param>
+        /// <returns></returns>
         public virtual List<IBase> Busca(string codigoBuscar)
         {
             var list = new List<IBase>();
 
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
-                //string chavePrimaria = string.Empty;
-                //List<string> where = new List<string>();
-
-                //foreach (PropertyInfo pi in this.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance))
-                //{
-                //    OpcoesBase pOpcoesBase = (OpcoesBase)pi.GetCustomAttribute(typeof(OpcoesBase));
-
-                //    if (pOpcoesBase != null)
-                //    {
-                //        if (pOpcoesBase.ChavePrimaria && pOpcoesBase.UsarParaBuscar)
-                //        {
-                //            chavePrimaria = pi.Name;
-                //        }
-                //    }
-                //}
-
                 string queryString = "EXEC uspBuscarCodigo" + this.GetType().Name + " '" + codigoBuscar + "';";
 
                 SqlCommand command = new SqlCommand(queryString, connection);
