@@ -426,7 +426,7 @@ namespace UI
             this.MinimumSize = new System.Drawing.Size(1144, 665);
             this.Name = "FrmProduto";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.FrmProduto_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

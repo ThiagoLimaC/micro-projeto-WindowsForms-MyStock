@@ -13,35 +13,27 @@ namespace UI
 {
     public partial class FrmProduto : Form
     {
+        // Método construtor 
         public FrmProduto()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        // Métodos privados 
+
+
+        /// <summary>
+        /// Chama a ação do método LoadAll no evento de Load do Form 
+        /// </summary>
+        private void FrmProduto_Load(object sender, EventArgs e)
         {
             LoadAll();
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            btnSalvar.Text = "Salvar";
-        }
-
-        private void FrmCadastro_Load(object sender, EventArgs e)
-        {
-            LoadAll();
-        }
-
-        private void LimparCampos()
-        {
-            txtCodigo.Text = string.Empty;
-            txtNome.Text = string.Empty;
-            txtValor.Text = string.Empty;
-            txtDescricao.Text = string.Empty;
-            txtCodigo.Enabled = true;
-        }
-
+        /// <summary>
+        /// Carrega todos os itens cadastrados na tabela do banco de dados
+        /// para o a datagridview
+        /// </summary>
         private void LoadAll()
         {
             dgProduto.Rows.Clear();
@@ -74,6 +66,51 @@ namespace UI
             }
         }
 
+        /// <summary>
+        /// Limpa todas as caixas de texto e define apenas a txtCodigo
+        /// como enabled = true para não permitir a edição do código do 
+        /// item pelo usuário
+        /// </summary>
+        private void LimparCampos()
+        {
+            txtCodigo.Text = string.Empty;
+            txtNome.Text = string.Empty;
+            txtValor.Text = string.Empty;
+            txtDescricao.Text = string.Empty;
+            txtCodigo.Enabled = true;
+        }
+
+
+        /// <summary>
+        /// Define o Text do btnSalvar como "Salvar"
+        /// </summary>
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            btnSalvar.Text = "Salvar";
+        }
+
+        /// <summary>
+        /// Define o Text do btnSalvar como "Editar"
+        /// </summary>
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            btnSalvar.Text = "Editar";
+            txtCodigo.Enabled = false;
+        }
+
+        /// <summary>
+        /// Define o Text do btnSalvar como "Excluir"
+        /// </summary>
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            btnSalvar.Text = "Excluir";
+            txtCodigo.Enabled = false;
+        }
+
+        /// <summary>
+        /// Envia os dados do produto e a ação que vai ser executada no banco de dados
+        /// por meio do método Salvar da classe Base
+        /// </summary>
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             var produto = new Produto();
@@ -86,7 +123,12 @@ namespace UI
 
             produto.Descricao = txtDescricao.Text;
 
-            if (btnSalvar.Text == "Editar")
+            if (btnSalvar.Text == "Salvar")
+            {
+                produto.Salvar(1);
+                MessageBox.Show("Produto cadastrado com sucesso!");
+            }
+            else if (btnSalvar.Text == "Editar")
             {
                 produto.Salvar(2);
                 MessageBox.Show("Produto editado com sucesso!");
@@ -96,17 +138,16 @@ namespace UI
                 produto.Salvar(3);
                 MessageBox.Show("Produto excluído com sucesso!");
             }
-            else if (btnSalvar.Text == "Salvar")
-            {
-                produto.Salvar(1);
-                MessageBox.Show("Produto cadastrado com sucesso!");
-            }
-
 
             LimparCampos();
             LoadAll();
         }
 
+        /// <summary>
+        /// Utiliza o método Busca da classe Base para enviar o código 
+        /// do produto e retornar uma lista com suas informações e inseri-
+        /// las na datagridview
+        /// </summary>
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             dgProduto.Rows.Clear();
@@ -127,21 +168,12 @@ namespace UI
             txtPesquisar.Clear();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            btnSalvar.Text = "Editar";
-            txtCodigo.Enabled = false;
-        }
-
-        private void btnExcluir_Click(object sender, EventArgs e)
-        {
-            btnSalvar.Text = "Excluir";
-            txtCodigo.Enabled = false;
-        }
-
+        /// <summary>
+        /// Carrega todas as colunas da linha selecionada para as textBox 
+        /// para permitir a edição ou exclusão de um item 
+        /// </summary>
         private void dgProduto_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             LimparCampos();
 
             var prod = new Produto();
@@ -170,6 +202,9 @@ namespace UI
             LoadAll();
         }
 
+        /// <summary>
+        /// Fecha o programa
+        /// </summary>
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
