@@ -123,6 +123,8 @@ namespace UI
 
                 dgProduto.Rows.Add(row1);
             }
+
+            txtPesquisar.Clear();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
