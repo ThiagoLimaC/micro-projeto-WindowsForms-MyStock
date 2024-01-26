@@ -166,6 +166,8 @@ namespace UI
             txtNome.Text = prod.Nome;
             txtValor.Text = prod.Valor.ToString();
             txtDescricao.Text = prod.Descricao;
+
+            LoadAll();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
