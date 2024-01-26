@@ -83,6 +83,7 @@ namespace UI
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(53)))), ((int)(((byte)(97)))));
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,7 +93,7 @@ namespace UI
             this.btnSair.Location = new System.Drawing.Point(3, 535);
             this.btnSair.Name = "btnSair";
             this.btnSair.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnSair.Size = new System.Drawing.Size(264, 67);
+            this.btnSair.Size = new System.Drawing.Size(258, 67);
             this.btnSair.TabIndex = 4;
             this.btnSair.Text = "         Sair";
             this.btnSair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
